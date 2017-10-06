@@ -8,8 +8,13 @@
 
 <ion-content padding>
     <h2>
-        Hi! {{userName}}
+        Hi! {{userId}}
     </h2>
+    <ion-item>
+        <ion-input type="text" [(ngModel)]="partnerId" placeholder="partnerId"></ion-input>
+    </ion-item>
+    <button ion-button (click)="call()">Call</button>
+
     <video id="my-video" autoplay></video>
-    <video id="other-video" autoplay></video>
+    <video id="partner-video" autoplay></video>
 </ion-content>

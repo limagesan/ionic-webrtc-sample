@@ -7,13 +7,13 @@ import { CallPage } from '../call/call';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  userName: string;
+  userId: string;
 
   constructor(public navCtrl: NavController) {
 
   }
 
   login() {
-    this.navCtrl.push(CallPage, { userName: this.userName });
+    this.navCtrl.push(CallPage, { userName: this.userId });
   }
 }

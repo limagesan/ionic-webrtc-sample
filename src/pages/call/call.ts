@@ -7,7 +7,8 @@ import { WebRTCProvider } from '../../providers/webrtc';
     templateUrl: 'call.html'
 })
 export class CallPage {
-    userName: string;
+    userId: string;
+    partnerId: string;
     myEl: HTMLMediaElement;
     partnerEl: HTMLMediaElement;
 
@@ -17,17 +18,17 @@ export class CallPage {
         public webRTC: WebRTCProvider,
         public elRef: ElementRef
     ) {
-        this.userName = this.navParams.get('userName');
+        this.userId = this.navParams.get('userId');
     }
 
     ionViewDidLoad() {
         this.myEl = this.elRef.nativeElement.querySelector('#my-video');
-        this.getMedia();
-        this.webRTC.createPeer(this.userName);
+        this.myEl = this.elRef.nativeElement.querySelector('#partner-video');
+        this.webRTC.init(this.userId, this.myEl, this.partnerEl);
     }
 
-    getMedia() {
-        this.webRTC.getMedia(this.myEl);
+    call() {
+        this.webRTC.call(this.partnerId);
     }
 
 }
