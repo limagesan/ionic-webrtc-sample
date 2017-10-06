@@ -23,9 +23,11 @@ export class CallPage {
     ionViewDidLoad() {
         this.myEl = this.elRef.nativeElement.querySelector('#my-video');
         this.getMedia();
+        this.webRTC.createPeer(this.userName);
     }
 
     getMedia() {
         this.webRTC.getMedia(this.myEl);
     }
+
 }
