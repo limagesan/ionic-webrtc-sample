@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CallPage } from '../pages/call/call';
 
+import { WebRTCProvider } from '../providers/webrtc';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,6 +29,7 @@ import { CallPage } from '../pages/call/call';
   providers: [
     StatusBar,
     SplashScreen,
+    WebRTCProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
