@@ -11,4 +11,11 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+  <ion-list>
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="userName" placeholder="Username"></ion-input>
+    </ion-item>
+    <button ion-button (click)="login()">Login</button>
+  </ion-list>
 </ion-content>
