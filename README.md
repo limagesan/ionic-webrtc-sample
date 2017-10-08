@@ -1,26 +1,44 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
-
-## How to use this template
-
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+This is a ionic project using webrtc and peerjs.
+## Environment
+This is my develop environment.
+```shell-session
+% node -v
+v8.6.0
 ```
 
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+```shell-session
+% ionic -v
+3.12.0
 ```
 
-Substitute ios for android if not on a Mac.
+```shell-session
+% cordova -v
+7.0.1
+```
 
+## Setup
+
+```shell-session
+% npm install
+```
+
+iOS  
+```shell-session
+% cordova platform add ios
+% ionic cordova build ios
+```
+
+## Run
+PC  
+```shell-session
+% ionic serve
+```
+
+iOS  
+```shell-session
+% cordova build ios
+```
+  
+open `xcworkspace` file in the `platform/ios` and run on your device.
+### PostScript
+Xcode which version > 9.0 cannot build this source because Xcode cannot convert swift2.x to 3.x.
