@@ -53,8 +53,7 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {},
-            "cordova-plugin-iosrtc": {}
+            "ionic-plugin-keyboard": {}
         }
     }
 }

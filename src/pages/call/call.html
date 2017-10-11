@@ -1,20 +1,20 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>
-            Call Page
-        </ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>
+      Call Page
+    </ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <h2>
-        Hi! {{userId}}
-    </h2>
-    <ion-item>
-        <ion-input type="text" [(ngModel)]="partnerId" placeholder="partnerId"></ion-input>
-    </ion-item>
-    <button ion-button (click)="call()">Call</button>
+  <h2>
+    Hi! {{userId}}
+  </h2>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="partnerId" placeholder="partnerId"></ion-input>
+  </ion-item>
+  <button ion-button (click)="call()">Call</button>
 
-    <video id="my-video" autoplay></video>
-    <video id="partner-video" autoplay></video>
+  <video id="my-video" autoplay playsinline></video>
+  <video id="partner-video" autoplay playsinline></video>
 </ion-content>
